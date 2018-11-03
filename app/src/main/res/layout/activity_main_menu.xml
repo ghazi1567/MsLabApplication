@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="me.kevingleason.mslab.Activities.one"
+    android:background="@drawable/order_background"
+    android:orientation="vertical"
+    >
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_gray"
+        android:orientation="vertical">
+
+
+        <!--This is for the Image-->
+        <!--android:src="@drawable/medial_art_2"-->
+
+        <!--End of the Image-->
+
+
+        <!--This is for the main Content-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="vertical">
+
+            <!--This  is for the Frame Layout-->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="87dp">
+
+                <!--This is for the image View-->
+                <!--android:background="@drawable/doctors"-->
+                <!--End of the image View-->
+
+                <!--This  is for the text Layout-->
+                <TextView
+                    android:id="@+id/titleText"
+                    android:layout_width="match_parent"
+                    android:layout_height="87dp"
+                    android:background="#50222222"
+                    android:gravity="center"
+                    android:text="Ms Lab"
+                    android:textAlignment="center"
+                    android:textColor="#ffffff"
+                    android:textSize="50sp" />
+                <!--End of the text Layout-->
+
+            </FrameLayout>
+            <!--End of the Frame Layout-->
+
+
+            <!--This is for the blue line-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:background="#222" />
+            <!--End of the blue line-->
+
+
+            <!--This is for the List View-->
+            <ListView
+                android:id="@+id/list"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:background="@color/main_gray"
+                android:divider="@color/material_blue_grey_800"
+                android:dividerHeight="1dp" />
+            <!--End of the List View-->
+
+
+        </LinearLayout>
+        <!--End of the Main Content-->
+
+
+        <!--This is for the image-->
+        <!--End of the image-->
+
+
+    </FrameLayout>
+</LinearLayout>

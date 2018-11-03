@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "64748807825",
+    "firebase_url": "https://fullfirebasetestworkwithdoc.firebaseio.com",
+    "project_id": "fullfirebasetestworkwithdoc",
+    "storage_bucket": "fullfirebasetestworkwithdoc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:64748807825:android:adaac800a5f48cad",
+        "android_client_info": {
+          "package_name": "me.kevingleason.mslab"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "64748807825-hlpeujsihd3fkv62arupfso8h8ueman3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "me.kevingleason.mslab",
+            "certificate_hash": "5f84dd8153ddc7279008dda4b72882e4f63b9212"
+          }
+        },
+        {
+          "client_id": "64748807825-f60q0r6fvbvl27vmn1dsti5ehjmsdadt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDookQm991Cg5FHMF1w-r9cD3DZvt_vjHc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "64748807825-f60q0r6fvbvl27vmn1dsti5ehjmsdadt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

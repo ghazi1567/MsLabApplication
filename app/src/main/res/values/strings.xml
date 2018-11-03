@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">MS Lab</string>
+
+    <!--Splash Activity Text Liens-->
+    <string name="loadingText">Loading</string>
+    <!--End of  Splash Activity Lines-->
+
+
+    <!--This is for the Sign in Activity-->
+    <string name="motiveOfAuth">Authenticate \nYourselves</string>
+    <!--End of the sign in Activity-->
+
+
+</resources>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_focused="false">
+        <shape>
+
+            <corners android:radius="10dp"/>
+            <stroke android:color="@color/msLabWhite"
+                android:width="3dp"
+                ></stroke>
+
+
+            <solid
+                android:color="@color/msLabTransparent"
+                ></solid>
+
+        </shape>
+    </item>
+    <item android:state_focused="true">
+        <shape>
+
+            <corners android:radius="10dp"/>
+            <stroke android:color="@color/msLabAccent_1"
+                android:width="3dp"
+                ></stroke>
+
+            <solid
+                android:color="@color/msLabTransparent"
+                ></solid>
+        </shape>
+    </item>
+
+</selector>

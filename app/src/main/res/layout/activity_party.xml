@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="me.kevingleason.mslab.Activities.PartyActivity"
+    android:background="@drawable/splash_activity"
+    android:orientation="vertical"
+    >
+
+
+    <!--This  is for the AutoComplete For the  Party Search-->
+    <RelativeLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_margin="15dp"
+        android:id="@+id/search_container"
+        >
+
+
+        <!--This  is for the Auto Complete-->
+        <AutoCompleteTextView
+         android:layout_height="50dp"
+         android:layout_width="match_parent"
+         android:hint="Enter party name to search"
+         android:textColor="@color/msLabWhite"
+         android:textColorHint="@color/msLabWhite"
+         android:textSize="14sp"
+         android:singleLine="true"
+         android:paddingLeft="20dp"
+         android:id="@+id/partyAuto"
+         android:layout_toLeftOf="@+id/search_btn"
+         android:layout_marginRight="10dp"
+         android:background="@drawable/widget_container"
+         android:paddingRight="10dp"
+            />
+        <Button
+           android:layout_height="48dp"
+           android:layout_width="wrap_content"
+           android:textColor="@color/msLabWhite"
+           android:background="@drawable/search_button_round_5"
+           android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:text="Search"
+           android:id="@+id/search_btn"
+           android:layout_alignParentRight="true"
+
+            />
+        <!--End of the Auto Complete-->
+
+
+
+    </RelativeLayout>
+    <!--End of AutoComplete For the Party Search-->
+
+
+
+
+
+    <!--This  is for the List View-->
+    <ListView
+     android:layout_height="match_parent"
+     android:layout_width="match_parent"
+     android:id="@+id/list"
+     android:padding="10dp"
+     android:layout_below="@+id/search_container"
+        />
+    <!--End of the List View-->
+
+
+
+
+</RelativeLayout>

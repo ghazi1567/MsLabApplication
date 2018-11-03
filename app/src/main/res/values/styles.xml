@@ -1,0 +1,46 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+
+
+    <style name="msLabBarLess" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/msLabPrimary</item>
+        <item name="colorPrimaryDark">@color/msLabPrimaryDark</item>
+        <item name="colorAccent">@color/msLabAccent_1</item>
+    </style>
+
+
+
+    <style name="msLabBar" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/msLabPrimary</item>
+        <item name="colorPrimaryDark">@color/msLabPrimaryDark</item>
+        <item name="colorAccent">@color/msLabAccent_1</item>
+    </style>
+
+
+
+
+
+
+    <!--This is a style For the Splash Activity-->
+    <style name="splashStyle" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/msLabPrimary</item>
+        <item name="colorPrimaryDark">@color/msLabPrimaryDark</item>
+        <item name="colorAccent">@color/msLabPrimaryDark</item>
+    </style>
+    <!--End of the Splash Activity-->
+
+
+
+
+
+
+</resources>

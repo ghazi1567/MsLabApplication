@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+    <!--This is for the scheme colors-->
+    <color name="msLabPrimary">#1d4380</color>
+    <color name="msLabPrimaryDark">#0a2653</color>
+    <color name="msLabAccent_1">#7fba00</color>
+    <color name="msLabAccent_2">#56b4d9</color>
+    <color name="msLabWhite">#ffffff</color>
+    <color name="msLabTransparent">#00ffffff</color>
+    <!--End of the Scheme Colors -->
+
+
+
+    <!--This is for the colors-->
+    <color name="msLabCartBack_1">#e7e3e0</color>
+    <color name="msLabCartBack_2">#dedad8</color>
+    <color name="msLabCartButton_1">#f4bf4e</color>
+    <color name="msLabCartButton_2">#f68c14</color>
+    <color name="msLabCartInternal_3">#f1e7e7e7</color>
+    <!--End of the Colors-->
+
+
+
+
+    <!--This is for the bhatti buttons-->
+    <color name="btn_info">#17a2b8</color>
+    <color name="btn_infoOver">#117a8b</color>
+    <color name="btn_danger">#dc3545</color>
+    <color name="btn_dangerOver_">#ab2330</color>
+    <color name="btn_success">#5cb85c</color>
+    <color name="btn_successOver">#4aa34a</color>
+    <!--End of the bhatti buttons-->
+
+
+
+
+
+
+
+    <!--This is for the new colors for the final APK-->
+
+    <!--This is for the white and Silver Mixed Color-->
+    <color name="whiteStart">#f3f3f4</color>
+    <color name="whiteEnd">#dcd9d9</color>
+    <!--End of the White And Silver Mixed Color-->
+
+
+    <!--This is for the text Color -->
+    <color name="OrangeText">#f68c14</color>
+    <!--End of the Text Color that Suits-->
+
+
+    <!--This is for the Text Color-->
+    <color name="colorForAuthInput">#f1f1f1</color>
+    <color name="main_gray">#eeeeee</color>
+    <!--end of the text Color-->
+
+
+
+    <!--End of the New Colors For the final APK-->
+
+
+
+
+
+
+
+
+</resources>
+

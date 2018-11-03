@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="me.kevingleason.mslab.Activities.SycnchedOrders"
+    android:background="@drawable/order_image"
+    >
+
+
+
+    <!--This is for the main Container-->
+    <RelativeLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        >
+
+
+        <!--This is for the first Layout-->
+        <LinearLayout
+            android:layout_height="450dp"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/savedOrders"
+            >
+
+
+            <!--This is for the top header for that activity -->
+            <LinearLayout
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/cart_header"
+                android:orientation="vertical">
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp">
+
+                    <!--This is for the container-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+
+                        <!--This is for the counter-->
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="match_parent"
+                            android:padding="5dp"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/pills" />
+
+                        <TextView
+                            android:id="@+id/itemCounter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="00"
+                            android:textColor="@color/btn_danger"
+                            android:textSize="15sp"
+                            android:textStyle="italic|bold" />
+                        <!--End of the counter-->
+
+
+                        <!--This is for the counter for the selection-->
+                        <TextView
+                            android:id="@+id/textViewToClear"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:clickable="true"
+                            android:gravity="center"
+                            android:onClick="MakeListClear"
+                            android:text="Clear"
+                            android:textColor="@color/btn_danger"
+                            android:textSize="15sp"
+                            android:textStyle="italic|bold"
+                            android:visibility="gone" />
+                        <!--End of the counter for the selection-->
+
+
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/btn_danger"
+                            android:onClick="ProcessOrders"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:text="Process"
+                            android:textColor="#ffffff"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+                    <!--End of the container-->
+
+                </HorizontalScrollView>
+
+
+                <!--This is for the Line-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="4dp"
+                    android:background="#5e6060"
+                    android:orientation="vertical" />
+                <!--End of  the line-->
+
+
+            </LinearLayout>
+            <!--End of the activity header  for the that top activity-->
+
+
+            <!--This  is for the Layout-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_margin="20dp"
+                android:background="@drawable/centeral_card"
+                android:orientation="vertical">
+
+
+                <!--This is for the header  for the information-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:background="@drawable/bill_header"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+                <!--End of the header for the information-->
+
+                <!--This is for the header-->
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:background="#815217">
+
+                    <!--This  is for the grids-->
+                    <android.support.constraint.Guideline
+                        android:id="@+id/zero"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.10" />
+
+                    <!--This  is for the grids-->
+                    <android.support.constraint.Guideline
+                        android:id="@+id/first40"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.40" />
+
+                    <android.support.constraint.Guideline
+                        android:id="@+id/second40"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.80" />
+                    <!--End of the grids-->
+
+
+                    <!--This is for the number-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:gravity="center"
+                        android:text="No."
+                        android:textAlignment="gravity"
+                        android:textColor="#ffffff"
+                        android:textSize="10sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/zero"
+                        app:layout_constraintTop_toTopOf="parent" />
+                    <!--End of the number-->
+
+
+                    <!--This is for the TextView-->
+
+                    <!--End of the TextView-->
+
+
+                    <!--This is for the TextView-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:gravity="center"
+                        android:text="Date"
+                        android:textAlignment="gravity"
+                        android:textColor="#ffffff"
+                        android:textSize="10sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@+id/zero"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                    <!--End of the TextView-->
+
+                </android.support.constraint.ConstraintLayout>
+                <!--End of the header-->
+
+
+                <!--This is for the List-->
+                <ListView
+                    android:id="@+id/listView"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent" />
+                <!--End of List-->
+
+
+            </LinearLayout>
+            <!--End of the Layout for the list-->
+
+
+
+        </LinearLayout>
+        <!--End of the first Layout-->
+
+
+
+
+        <!--This is for the Buttons-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="3dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:id="@+id/bottom_buttons"
+            android:layout_below="@+id/savedOrders"
+            android:gravity="center"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            >
+
+
+            <!--This is for the update Button-->
+            <Button
+                android:layout_height="25dp"
+                android:layout_width="wrap_content"
+                android:background="@drawable/btn_info"
+                android:text="Update"
+                android:textSize="14sp"
+                android:paddingRight="20dp"
+                android:paddingLeft="20dp"
+                android:textColor="#ffffff"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:layout_centerVertical="true"
+                android:id="@+id/updateButton"
+                android:visibility="gone"
+                android:layout_alignParentLeft="true"
+                android:onClick="UpdateSavedOrders"
+                />
+            <!--end of update Button-->
+
+
+
+
+
+
+
+
+
+            <!--This is for the right button-->
+            <Button
+                android:layout_height="25dp"
+                android:layout_width="wrap_content"
+                android:background="@drawable/btn_danger"
+                android:text="Remove"
+                android:textSize="14sp"
+                android:paddingRight="20dp"
+                android:paddingLeft="20dp"
+                android:textColor="#ffffff"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:id="@+id/btn_remove"
+                android:visibility="gone"
+                android:onClick="RemoveSelectedOrders"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true" />
+            <!--End of the right Button-->
+
+
+        </RelativeLayout>
+        <!--End of the Buttons-->
+
+
+
+
+
+    </RelativeLayout>
+    <!--End of the main Container-->
+
+
+
+
+
+
+    <!--This is for the Second Container-->
+    <LinearLayout
+        android:layout_height="300dp"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/overflowContainer"
+        android:visibility="gone"
+        >
+
+
+
+        <LinearLayout
+            android:layout_height="300dp"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/order_synched_overflow_list"
+            >
+            <!--This is for the area for the ListView-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_margin="2dp"
+                android:background="@drawable/centeral_card"
+                android:orientation="vertical">
+
+
+                <!--This is for the header  for the information-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@drawable/bill_header"
+                    android:orientation="vertical">
+                    <Button
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="end|center_vertical"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/btn_danger"
+                        android:id="@+id/hideButton"
+                        android:paddingLeft="2dp"
+                        android:paddingRight="2dp"
+                        android:text="X"
+                        android:visibility="visible"
+                        android:textColor="#ffffff"
+                        android:textSize="15sp" />
+                </LinearLayout>
+                <!--End of the header for the information-->
+
+                <!--This is for the header-->
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:background="#815217">
+
+                    <!--This  is for the grids-->
+                    <android.support.constraint.Guideline
+                        android:id="@+id/zero_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.10" />
+
+                    <!--This  is for the grids-->
+                    <android.support.constraint.Guideline
+                        android:id="@+id/first40_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.40" />
+
+                    <android.support.constraint.Guideline
+                        android:id="@+id/second40_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.80" />
+                    <!--End of the grids-->
+
+
+                    <!--This is for the number-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:gravity="center"
+                        android:text="No."
+                        android:textAlignment="gravity"
+                        android:textColor="#ffffff"
+                        android:textSize="10sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@+id/zero_1"
+                        app:layout_constraintTop_toTopOf="parent" />
+                    <!--End of the number-->
+
+
+                    <!--This is for the TextView-->
+
+                    <!--End of the TextView-->
+
+
+                    <!--This is for the TextView-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:gravity="center"
+                        android:text="Product Name"
+                        android:textAlignment="gravity"
+                        android:textColor="#ffffff"
+                        android:textSize="10sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@+id/zero_1"
+                        app:layout_constraintRight_toLeftOf="@+id/second40_1"
+                        app:layout_constraintTop_toTopOf="parent" />
+                    <!--End of the TextView-->
+
+
+                    <!--This is for the TextView-->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:gravity="center"
+                        android:text="Quantity"
+                        android:textAlignment="gravity"
+                        android:textColor="#ffffff"
+                        android:textSize="10sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toRightOf="@+id/second40_1"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                    <!--End of the TextView-->
+
+
+                </android.support.constraint.ConstraintLayout>
+                <!--End of the header-->
+
+
+                <!--This is for the List-->
+                <ListView
+                    android:id="@+id/listView_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent" />
+                <!--End of List-->
+
+
+            </LinearLayout>
+            <!--End of the area for the ListView-->
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+    <!--End of the Second Container-->
+
+
+
+
+
+
+</FrameLayout>

@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="me.kevingleason.mslab.Activities.CartActivity"
+    android:background="@drawable/order_background"
+    >
+
+
+    <!--This is for the top header for that activity -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/cart_header"
+        android:orientation="vertical">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="48dp">
+
+            <!--This is for the container-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="50dp"
+                    android:background="@drawable/exit"
+                    android:onClick="Exit"
+                    android:padding="10dp"
+                    android:scaleType="centerInside" />
+
+
+                <!--This is for the counter-->
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/pills" />
+
+                <TextView
+                    android:id="@+id/itemCounter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center"
+                    android:text="00"
+                    android:textColor="@color/btn_danger"
+                    android:textSize="15sp"
+                    android:textStyle="italic|bold" />
+                <!--End of the counter-->
+
+
+                <!--This is for the counter for the selection-->
+                <TextView
+                    android:id="@+id/textViewToClear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:onClick="MakeListClear"
+                    android:text="Clear"
+                    android:textColor="@color/btn_danger"
+                    android:textSize="15sp"
+                    android:textStyle="italic|bold"
+                    android:visibility="gone" />
+                <!--End of the counter for the selection-->
+
+
+                <Button
+                    android:id="@+id/process"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/btn_danger"
+                    android:onClick="MakeOrder"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+
+                    android:text="Process"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp" />
+
+                <Button
+                    android:id="@+id/btn_update"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/btn_success"
+                    android:onClick="updateOrder"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="Update"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp"
+                    android:visibility="gone" />
+
+
+            </LinearLayout>
+            <!--End of the container-->
+
+        </HorizontalScrollView>
+
+
+        <!--This is for the Line-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="#5e6060"
+            android:orientation="vertical" />
+        <!--End of  the line-->
+
+
+    </LinearLayout>
+    <!--End of the activity header  for the that top activity-->
+
+
+
+
+    <!--This is for the Card Layout-->
+    <LinearLayout
+        android:id="@+id/cardInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/header"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="18dp"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+
+        <!--This  is for the party Section-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="2dp"
+            android:background="@drawable/centeral_card">
+
+            <!--This is for the icon-->
+            <ImageView
+                android:id="@+id/partyId"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/enterprise" />
+            <!--End of the icon-->
+
+
+            <!--This is for the autoComplete-->
+            <AutoCompleteTextView
+                android:id="@+id/partySelector"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/partyId"
+                android:background="#00222222"
+                android:backgroundTint="#222"
+                android:hint="Party"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:singleLine="true"
+                android:textAlignment="textStart"
+                android:textColorHint="#222"
+                android:textSize="15sp" />
+            <!--This is for the autoComplete-->
+
+
+        </RelativeLayout>
+        <!--End of the party Section-->
+
+        <!--This is for the Product Remarks-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/centeral_card">
+
+            <!--This is for the icon-->
+            <ImageView
+                android:id="@+id/productRemarksIcon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:scaleType="centerInside"
+                android:src="@drawable/comment" />
+            <!--End of the icon-->
+
+
+            <!--This is for the autoComplete-->
+            <EditText
+                android:id="@+id/productRemarks"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/productRemarksIcon"
+                android:background="#00222222"
+                android:backgroundTint="#222"
+                android:hint="Remaks"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:singleLine="true"
+                android:textAlignment="textStart"
+                android:textColorHint="#222"
+                android:textSize="15sp" />
+            <!--This is for the autoComplete-->
+
+
+        </RelativeLayout>
+        <!--End of the Product Remarks-->
+
+        <!--This is for the Product Selection-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/centeral_card">
+
+            <!--This is for the icon-->
+            <ImageView
+                android:id="@+id/productId"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/pills" />
+            <!--End of the icon-->
+
+
+            <!--This is for the autoComplete-->
+            <AutoCompleteTextView
+                android:id="@+id/productSelector"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/productId"
+                android:background="#00222222"
+                android:backgroundTint="#222"
+                android:hint="Product"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:singleLine="true"
+                android:textAlignment="textStart"
+                android:textColorHint="#222"
+                android:textSize="15sp" />
+            <!--This is for the autoComplete-->
+
+
+        </RelativeLayout>
+        <!--End of the Product Selection-->
+
+        <!--This is for the Product Number-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/centeral_card">
+
+            <!--This is for the icon-->
+            <ImageView
+                android:id="@+id/productCounterId"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/quantity" />
+            <!--End of the icon-->
+
+
+            <!--This is for the autoComplete-->
+            <EditText
+                android:id="@+id/productCounter"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/productCounterId"
+                android:background="#00222222"
+                android:backgroundTint="#222"
+                android:hint="Qty"
+                android:inputType="number"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:singleLine="true"
+                android:textAlignment="textStart"
+                android:textColorHint="#222"
+                android:textSize="15sp" />
+            <!--This is for the autoComplete-->
+
+
+        </RelativeLayout>
+        <!--End of the Product Number-->
+
+
+        <!--This is for the Buttons-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="2dp">
+
+
+            <!--This is for the update Button-->
+            <Button
+                android:id="@+id/updateButton"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/btn_info"
+                android:onClick="UpdateProduct"
+                android:paddingBottom="2dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="2dp"
+                android:text="Update"
+                android:textColor="#ffffff"
+                android:textSize="14sp"
+                android:visibility="gone" />
+            <!--end of update Button-->
+
+
+            <!--This  is for the remove button-->
+            <ImageView
+                android:id="@+id/removeSelectedItems"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="5dp"
+                android:clickable="true"
+                android:onClick="RemoveSelectedItems"
+                android:src="@android:drawable/ic_delete"
+                android:visibility="gone" />
+            <!--End of the remove button-->
+
+
+            <!--This is for the right button-->
+            <Button
+                android:id="@+id/btn_add"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/updateButton"
+                android:layout_centerVertical="true"
+                android:background="@drawable/btn_success"
+                android:onClick="AddProduct"
+                android:paddingBottom="2dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="2dp"
+                android:text="Add"
+                android:textColor="#ffffff"
+                android:textSize="14sp"
+                android:visibility="gone" />
+            <!--End of the right Button-->
+
+
+        </RelativeLayout>
+        <!--End of the Buttons-->
+
+
+    </LinearLayout>
+    <!--End of the card Layout-->
+
+
+
+
+
+
+
+    <!--This  is for the Layout-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/centeral_card"
+        android:orientation="vertical">
+
+
+        <!--This is for the header  for the information-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="@drawable/bill_header"
+            android:orientation="vertical">
+
+        </LinearLayout>
+        <!--End of the header for the information-->
+
+        <!--This is for the header-->
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="#815217">
+
+            <!--This  is for the grids-->
+            <android.support.constraint.Guideline
+                android:id="@+id/zero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.10" />
+
+            <!--This  is for the grids-->
+            <android.support.constraint.Guideline
+                android:id="@+id/first40"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.40" />
+
+            <android.support.constraint.Guideline
+                android:id="@+id/second40"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.80" />
+            <!--End of the grids-->
+
+
+            <!--This is for the number-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:text="No."
+                android:textAlignment="gravity"
+                android:textColor="#ffffff"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/zero"
+                app:layout_constraintTop_toTopOf="parent" />
+            <!--End of the number-->
+
+
+            <!--This is for the TextView-->
+
+            <!--End of the TextView-->
+
+
+            <!--This is for the TextView-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:text="Product Name"
+                android:textAlignment="gravity"
+                android:textColor="#ffffff"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/zero"
+                app:layout_constraintRight_toLeftOf="@+id/second40"
+                app:layout_constraintTop_toTopOf="parent" />
+            <!--End of the TextView-->
+
+
+            <!--This is for the TextView-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:text="Quantity"
+                android:textAlignment="gravity"
+                android:textColor="#ffffff"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/second40"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <!--End of the TextView-->
+
+
+        </android.support.constraint.ConstraintLayout>
+        <!--End of the header-->
+
+
+        <!--This is for the List-->
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent" />
+        <!--End of List-->
+
+
+    </LinearLayout>
+    <!--End of the Layout for the list-->
+
+
+
+
+
+
+
+
+</LinearLayout>

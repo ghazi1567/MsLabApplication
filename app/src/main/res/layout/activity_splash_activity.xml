@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="me.kevingleason.mslab.splash_activity"
+    android:background="@drawable/splash_background"
+    >
+
+
+
+
+
+    <!--This is for the logo-->
+    <ImageView
+        android:layout_height="200dp"
+        android:layout_width="match_parent"
+        android:id="@+id/logo"
+        android:scaleType="centerInside"
+        android:layout_centerInParent="true"
+        android:src="@drawable/logo_shadow"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        />
+    <!--End of the Logo-->
+
+
+
+    <!--This is for the Loading Text -->
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/loadingText"
+        android:textColor="@color/msLabPrimaryDark"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        android:id="@+id/loadingText"
+        android:layout_below="@+id/logo"
+        android:layout_centerHorizontal="true" />
+    <!-- End of the Loading Text -->
+
+
+    <!--This is for the Circular Progress-->
+    <ProgressBar
+     android:layout_height="40sp"
+     android:layout_width="40sp"
+     android:progressBackgroundTintMode="@color/msLabPrimaryDark"
+     android:layout_toRightOf="@+id/loadingText"
+     android:layout_below="@+id/logo"
+     android:layout_marginLeft="20dp"
+        />
+    <!--End of the Circular Progress-->
+
+
+
+
+
+
+
+
+
+</RelativeLayout>
